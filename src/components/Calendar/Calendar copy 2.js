@@ -20,47 +20,36 @@ const Calendar = props => {
         props.selectedDate && 
         <p className="selected-data-show">Выбранная дата: {props.selectedDate.toLocaleDateString()}</p>
       }
-      <div className="card">
-        <div className="card-header">
-          <div className='row text-center header'>
-            <div className="col-sm">
-              <button className='btn btn-light' onClick={props.handlePrevMonthButtonClick}>{'<'}</button>
-            </div>
-            <div className="col-sm">
-              <select 
-                className="select-calendar" 
-                ref={monthSelect} 
-                onChange={handleSelectChange}
-                value={props.date.getMonth()}
-              >
-                {
-                  props.months.map((month, i) => {
-                  return <option key={month} value={i}>{month}</option>
-                  })
-                }
-              </select>
-              </div>
-              <div className="col-sm">
-                <select
-                  className="select-calendar" 
-                  ref={yearSelect} 
-                  onChange={handleSelectChange}
-                  value={props.date.getFullYear()}
-                >
-                  {
-                    props.years.map(year => {
-                      return <option key={year} value={year}>{year}</option>
-                    })
-                  }
-                </select>
-              </div>
-              <div className="col-sm">
-                <button className='btn btn-light' onClick={props.handleNextMonthButtonClick}>{'>'}</button>
-              </div>
-          </div>
-        </div>
+      <div className='header'>
+        <button className='btn btn-light' onClick={props.handlePrevMonthButtonClick}>{'<'}</button>
+        <select 
+          className="select-calendar" 
+          ref={monthSelect} 
+          onChange={handleSelectChange}
+          value={props.date.getMonth()}
+        >
+          {
+            props.months.map((month, i) => {
+             return <option key={month} value={i}>{month}</option>
+            })
+          }
+        </select>
+        <select
+          className="select-calendar" 
+          ref={yearSelect} 
+          onChange={handleSelectChange}
+          value={props.date.getFullYear()}
+        >
+          {
+            props.years.map(year => {
+              return <option key={year} value={year}>{year}</option>
+            })
+          }
+        </select>
+        <button className='btn btn-light' onClick={props.handleNextMonthButtonClick}>{'>'}</button>
       </div>
-      <table className="table mt-2">
+
+      <table className="table">
         <thead>
           <tr>
             {

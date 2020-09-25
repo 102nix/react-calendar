@@ -48,11 +48,11 @@ const CalendarContainer = () => {
       baseDate ={baseDate}
       selectedDate = {selectedDate}
       handlePrevMonthButtonClick= {handlePrevMonthButtonClick}
+      handleNextMonthButtonClick = {handleNextMonthButtonClick}
       onSelectChange = {onSelectChange}
       date = {date} 
       months = {months}
       years = {years}
-      handleNextMonthButtonClick = {handleNextMonthButtonClick}
       weekDayNames = {weekDayNames}
       monthData = {monthData}
       handleDayClick = {handleDayClick}
