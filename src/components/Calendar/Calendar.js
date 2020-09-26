@@ -22,11 +22,11 @@ const Calendar = props => {
       }
       <div className="card">
         <div className="card-header">
-          <div className='row text-center header'>
-            <div className="col-sm">
+          <div className='row text-center'>
+            <div className="col-12 col-sm">
               <button className='btn btn-light' onClick={props.handlePrevMonthButtonClick}>{'<'}</button>
             </div>
-            <div className="col-sm">
+            <div className="col-12 col-sm">
               <select 
                 className="select-calendar" 
                 ref={monthSelect} 
@@ -40,7 +40,7 @@ const Calendar = props => {
                 }
               </select>
               </div>
-              <div className="col-sm">
+              <div className="col-12 col-sm">
                 <select
                   className="select-calendar" 
                   ref={yearSelect} 
@@ -54,7 +54,7 @@ const Calendar = props => {
                   }
                 </select>
               </div>
-              <div className="col-sm">
+              <div className="col-12 col-sm">
                 <button className='btn btn-light' onClick={props.handleNextMonthButtonClick}>{'>'}</button>
               </div>
           </div>
